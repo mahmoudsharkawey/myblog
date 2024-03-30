@@ -1,6 +1,7 @@
 import { blogCard } from "../lib/interface";
 import { getData, urlFor } from "../lib/sanity";
 import Image from "next/image";
+export const revalidate = 30;
 
 const BlogCard = async () => {
   const data: blogCard[] = await getData();

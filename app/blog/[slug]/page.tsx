@@ -4,7 +4,9 @@ import { AtrticleBlog } from "../../lib/interface";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 
-const fetchData = async(slug: string) => {
+export const revalidate = 30;
+
+const fetchData = async (slug: string) => {
   const query = `
     *[_type  == 'blog' && slug.current == '${slug}'] {
         "currentSlug":slug.current,
@@ -25,9 +27,9 @@ const BlogArticle = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="px-4 py-6 md:px-6 lg:py-10">
       <article className="space-y-4 prose prose-gray mx-auto dark:prose-invert">
-      <h1 className="text-4xl font-extrabold tracking-tight lg:text-[40px]">
-            {data.title}
-          </h1>
+        <h1 className="text-4xl font-extrabold tracking-tight lg:text-[40px]">
+          {data.title}
+        </h1>
         <Image
           className="rounded-xl w-[100%] h-96 object-cover"
           src={urlFor(data.titleImage).url()}
@@ -36,11 +38,12 @@ const BlogArticle = async ({ params }: { params: { slug: string } }) => {
           height={200}
         />
         <div className="space-y-2 not-prose">
-          
-          <p className="text-gray-500 dark:text-gray-400 p-3">{data._createdAt}</p>
+          <p className="text-gray-500 dark:text-gray-400 p-3">
+            {data._createdAt}
+          </p>
         </div>
         <div className="prose prose-blue prose-xl dark:prose-invert ">
-            <PortableText value={data.content}/>
+          <PortableText value={data.content} />
         </div>
       </article>
     </div>
