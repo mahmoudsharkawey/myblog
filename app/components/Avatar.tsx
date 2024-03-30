@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 
 export function AvatarDemo() {
@@ -19,7 +18,7 @@ export function AvatarDemo() {
         <div className="animate-pulse flex flex-col">
           <h1 className="text-3xl sm:text-5xl">Hello and Welcome </h1>
           <br />
-          <h2 className="text-3xl sm:text-5xl">👋 I'm Mahmoud.</h2>
+          <h2 className="text-3xl sm:text-5xl">👋 Im Mahmoud </h2>
         </div>
       </div>
     </>
