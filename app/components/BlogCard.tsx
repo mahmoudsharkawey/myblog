@@ -9,7 +9,7 @@ const BlogCard = async () => {
     <div>
       {data.map((post, idx) => {
         return (
-          <div className="sm:flex p-8 justify-between max-[300px]:" key={idx}>
+          <div className="sm:flex p-8 justify-between max-h-[300px]" key={idx}>
             <div className="flex items-center space-x-4">
               <div className="flex-1">
                 <a href={`/blog/${post.currentSlug}`}>
