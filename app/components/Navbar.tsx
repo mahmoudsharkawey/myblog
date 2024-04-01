@@ -10,10 +10,27 @@ export default function Navbar() {
       </Link>
       <div className="flex w-full justify-end items-center gap-4  cursor-pointer ">
         <div className="hidden sm:flex w-full justify-end items-center gap-4  cursor-pointer ">
-          <Linkedin className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
-          <Github className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
-          <Youtube className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
-          <Facebook className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
+          <Link
+            href="https://www.linkedin.com/in/mahmoud-gamal-bb4b97284"
+            target="blank"
+          >
+            <Linkedin className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
+          </Link>
+          <Link href="https://github.com/mahmoudsharkawey" target="blank">
+            <Github className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
+          </Link>
+          <Link
+            href="https://youtube.com/@Mahmoud_Gamal_MG?si=CR8lV47otRtk1iB-"
+            target="blank"
+          >
+            <Youtube className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
+          </Link>
+          <Link
+            href="https://www.facebook.com/profile.php?id=100035122392740&mibextid=ZbWKwL"
+            target="blank"
+          >
+            <Facebook className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-600" />
+          </Link>
         </div>
         <div className="ml-8">
           <ModeToggle />

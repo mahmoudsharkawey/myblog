@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   icons: [
     {
       url: "/WhatsApp Image 2024-03-20 at 23.49.03_382de109.jpg",
-      type: "image/png",
+      type: "image/jng",
       sizes: "22x22",
     },
   ],
