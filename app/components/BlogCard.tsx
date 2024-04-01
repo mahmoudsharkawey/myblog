@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { blogCard } from "../lib/interface";
 import { getData, urlFor } from "../lib/sanity";
 import Image from "next/image";
@@ -12,15 +13,15 @@ const BlogCard = async () => {
           <div className="sm:flex p-8 justify-between " key={idx}>
             <div className="flex items-center space-x-4">
               <div className="flex-1">
-                <a href={`/blog/${post.currentSlug}`}>
+                <Link href={`/blog/${post.currentSlug}`}>
                   <h1 className="text-3xl font-bold hover:underline hover:cursor-pointer">
                     {post.title}
                   </h1>
-                </a>
+                </Link>
                 <p className="mt-2 text-sm text-gray-400">
                   {post._createdAt}
                   <span aria-hidden="true"> </span>
-                  <ClockIcon className="inline-block w-4 h-4 text-gray-400" /> 
+                  <ClockIcon className="inline-block w-4 h-4 text-gray-400" />
                 </p>
                 <p className="mt-4 text-lg ">{post.smallDescription}</p>
               </div>
