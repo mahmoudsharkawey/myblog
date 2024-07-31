@@ -23,7 +23,7 @@ const BlogCard = async () => {
                   <span aria-hidden="true"> </span>
                   <ClockIcon className="inline-block w-4 h-4 text-gray-400" />
                 </p>
-                <p className="mt-4 text-lg ">{post.smallDescription}</p>
+                <p className="mt-4 text-lg text-gray-500 ">{post.smallDescription}</p>
               </div>
             </div>
 
